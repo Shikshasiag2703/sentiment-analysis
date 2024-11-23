@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+body {
+  overflow: hidden;
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.restricted {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #06070a;
+}
+
+.gradientLeft.positive {
+  background: -o-radial-gradient(
+    50% 50%,
+    rgba(76, 175, 80, 0.8) 0,
+    rgba(0, 255, 0, 0) 100%
+  );
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(76, 175, 80, 0.8) 0,
+    rgba(0, 255, 0, 0) 100%
+  );
+}
+
+.gradientLeft.negative {
+  background: -o-radial-gradient(
+    50.03% 50.03%,
+    50.03% 50.03%,
+    rgba(227, 64, 42, 0.5) 0,
+    rgba(0, 9, 91, 0) 100%
+  );
+  background: radial-gradient(
+    50.03% 50.03% at 50.03% 50.03%,
+    rgba(227, 64, 42, 0.5) 0,
+    rgba(0, 9, 91, 0) 100%
+  );
+}
+
+.gradientLeft.neutral {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(169, 169, 169, 0.5) 0,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.gradientRight.positive {
+  background: -o-radial-gradient(
+    50% 50%,
+    rgba(76, 175, 80, 0.8) 0,
+    rgba(0, 255, 0, 0) 100%
+  );
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(76, 175, 80, 0.8) 0,
+    rgba(0, 255, 0, 0) 100%
+  );
+}
+
+.gradientRight.negative {
+  background: -o-radial-gradient(
+    50.03% 50.03%,
+    50.03% 50.03%,
+    #e3402a 0,
+    rgba(0, 9, 91, 0) 100%
+  );
+  background: radial-gradient(
+    50.03% 50.03% at 50.03% 50.03%,
+    #e3402a 0,
+    rgba(0, 9, 91, 0) 100%
+  );
+}
+
+.gradientRight.neutral {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(169, 169, 169, 0.5) 0,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.gradientLeft {
+  position: absolute;
+  width: 1008px;
+  height: 1038px;
+  left: -504px;
+  bottom: -516px;
+}
+
+.gradientRight {
+  position: absolute;
+  width: 861px;
+  height: 602px;
+  top: -315px;
+  right: -200px;
+  opacity: 0.45;
+}
+
+.loader {
+  width: 25px;
+  aspect-ratio: 2;
+  --_g: no-repeat radial-gradient(circle closest-side, #777777 90%, #0000);
+  background: var(--_g) 0% 50%, var(--_g) 50% 50%, var(--_g) 100% 50%;
+  background-size: calc(100% / 3) 50%;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {
+  20% {
+    background-position: 0% 0%, 50% 50%, 100% 50%;
+  }
+  40% {
+    background-position: 0% 100%, 50% 0%, 100% 50%;
+  }
+  60% {
+    background-position: 0% 50%, 50% 100%, 100% 0%;
+  }
+  80% {
+    background-position: 0% 50%, 50% 50%, 100% 100%;
+  }
+}

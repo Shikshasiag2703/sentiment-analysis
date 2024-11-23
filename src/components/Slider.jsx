@@ -8,6 +8,13 @@ const RotationBasedOnSentiment = {
   WEAK_POSITIVE: "rotate-[270deg]",
 };
 
+const MoodBasedOnSentiment = {
+  NEUTRAL: "Meh, life's okay.",
+  NEGATIVE: "Stormy skies ahead... 🌩️",
+  POSITIVE: "Over the moon! 🌕✨",
+  WEAK_POSITIVE: "A gentle breeze of joy. 🍃",
+};
+
 const BackgroundBasedOnSentiment = {
   NEUTRAL: "neutral",
   NEGATIVE: "negative",
@@ -149,9 +156,17 @@ const Slider = () => {
                   }`}
                   alt="pointer"
                 />
-                <p className="text-white text-xl">
-                  <b>Score:</b> {(score * 100).toFixed(1)}%
-                </p>
+                <div className="flex flex-col justify-center items-center">
+                  <p className="text-white text-xl">
+                    <b>Score:</b> {(score * 100).toFixed(1)}%
+                  </p>
+                  <p className="text-white text-xl whitespace-nowrap">
+                    <b>Mood:</b> {MoodBasedOnSentiment[sentiment]}
+                  </p>
+                  <p className="text-gray-100 text-lg whitespace-nowrap">
+                    (Sentiment {sentiment})
+                  </p>
+                </div>
               </div>
             </div>
             <div
